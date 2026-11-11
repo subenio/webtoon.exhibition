@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f2ed">
+  <meta name="description" content="다섯 개의 시선으로 만나는 모두를 위한 지하철 디자인 전시 만화">
+  <title>모두의 노선 — 지하철 디자인 만화 전시</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="top">
+    <section class="intro" id="exhibition">
+      <div class="language-switch" role="group" aria-label="Language">
+        <button type="button" data-language="ko" aria-pressed="true">한국어</button>
+        <button type="button" data-language="en" aria-pressed="false">English</button>
+      </div>
+      <div class="intro-copy">
+        <h1 id="mainTitle">Not Just<br>Designed For,<br><span>But Designed With</span></h1>
+        <p id="mainDescription">모두를 위해 디자인하는 것을 넘어,<br>열차에 탄 캐릭터를 선택해 이야기를 만나보세요.</p>
+      </div>
+      <div class="hero-train" id="heroTrain" role="group" aria-label="열차 안 캐릭터를 선택해 만화를 읽어보세요">
+        <div class="train-composite">
+          <img class="train-base" src="assets/train-empty-car.png" alt="">
+          <button class="car-character char-physical" data-zone="move" aria-label="Physical Disability 만화 읽기"><img src="assets/character-physical.png" alt=""></button>
+          <button class="car-character char-autism" data-zone="autism" aria-label="Autism Spectrum Disorder 만화 읽기"><img src="assets/character-autism.png" alt=""></button>
+          <button class="car-character char-adhd" data-zone="adhd" aria-label="ADHD and Dyslexia 만화 읽기"><img src="assets/character-adhd-dyslexia.png" alt=""></button>
+          <button class="car-character char-visual" data-zone="vision" aria-label="Visual Impairment 만화 읽기"><img src="assets/character-visual.png" alt=""></button>
+          <button class="car-character char-down" data-zone="down" aria-label="Intellectual Disability 만화 읽기"><img src="assets/character-down-syndrome.png" alt=""></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="exhibition" id="zones">
+      <div class="section-topline"><div><span class="section-index">01 / MEET THE CHARACTERS</span><h2>캐릭터를 골라 만화를 읽어보세요</h2></div></div>
+      <div class="floor-layout">
+        <div class="floorplan-wrap">
+          <div class="floorplan-label"><span>LEVEL 01</span><span>BANYAN COVE · INCLUSIVE TRAIN</span><span>가로로 이동하며 살펴보세요 ↔</span></div>
+          <div class="floorplan isometric" role="group" aria-label="지하철 전시 내부 평면도와 접근성 디자인 구역">
+            <div class="isometric-map">
+              <svg class="iso-art" viewBox="0 0 1100 540" role="img" aria-labelledby="isoTitle isoDesc" xmlns="http://www.w3.org/2000/svg">
+                <title id="isoTitle">모두의 노선 전시장 입체 안내도</title><desc id="isoDesc">벽과 바닥, 포용적 열차 전시 모형, 다섯 접근성 전시 부스가 있는 보라색 전시장 조감도입니다.</desc>
+                <defs>
+                  <linearGradient id="floorTop" x1="0" y1="0" x2="0.8" y2="1"><stop stop-color="#512050"/><stop offset="1" stop-color="#30113f"/></linearGradient>
+                  <linearGradient id="leftWall" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#35143f"/><stop offset="1" stop-color="#261035"/></linearGradient>
+                  <linearGradient id="rightWall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#30113d"/><stop offset="1" stop-color="#1c0b2d"/></linearGradient>
+                  <linearGradient id="trainBody" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff9bd0"/><stop offset="1" stop-color="#d84b9d"/></linearGradient>
+                  <filter id="softShadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="13" stdDeviation="10" flood-color="#10051d" flood-opacity=".55"/></filter>
+                  <pattern id="floorGrid" width="90" height="45" patternUnits="userSpaceOnUse" patternTransform="skewY(-23)"><path d="M90 0H0V45" fill="none" stroke="#ed83c2" stroke-opacity=".12" stroke-width="1"/></pattern>
+                </defs>
+                <!-- Cutaway gallery shell and polished exhibition floor -->
+                <path d="M100 190 739 45 1030 210 1030 285 390 435 100 270Z" fill="url(#leftWall)" stroke="#f178b9" stroke-opacity=".58" stroke-width="2"/>
+                <path d="M739 45 1030 210 1030 285 739 118Z" fill="url(#rightWall)" stroke="#f178b9" stroke-opacity=".48" stroke-width="2"/>
+                <path d="M100 190 739 45 1030 210 390 365Z" fill="url(#floorTop)" stroke="#ff8cc8" stroke-width="2"/>
+                <path d="M100 190 739 45 1030 210 390 365Z" fill="url(#floorGrid)" opacity=".8"/>
+                <!-- Glowing route through all five stations -->
+                <path d="M175 244 320 185 440 232 565 178 690 222 815 165 932 218" fill="none" stroke="#00d8ed" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round" opacity=".95"/>
+                <path d="M175 247 320 188 440 235 565 181 690 225 815 168 932 221" fill="none" stroke="#00d8ed" stroke-width="12" opacity=".12"/>
+                <!-- Rear wayfinding wall and luminous exhibition title -->
+                <path d="M160 169 390 117 390 174 160 228Z" fill="#0b376b" stroke="#00d8ed" stroke-width="2"/>
+                <text x="179" y="182" fill="#81f3fa" font-family="monospace" font-size="11" letter-spacing="2">INCLUSIVE TRAIN</text>
+                <text x="179" y="207" fill="#f178b9" font-family="sans-serif" font-weight="700" font-size="18">모두의 노선</text>
+                <path d="M170 219 380 170" stroke="#00d8ed" stroke-width="2" opacity=".7"/>
+                <!-- Five raised exhibition bays -->
+                <g filter="url(#softShadow)">
+                  <g><path d="M151 232 231 214 264 233 184 252Z" fill="#84336f"/><path d="M184 252 264 233 264 265 184 284Z" fill="#421544"/><path d="M151 232 184 252 184 284 151 264Z" fill="#59204f"/><path d="M162 217 228 202 254 217 188 233Z" fill="#f178b9"/><path d="M162 217v15l26 15v-14" fill="#bd438b"/><text x="200" y="220" fill="#321039" font-family="monospace" font-size="10" font-weight="bold">01</text></g>
+                  <g><path d="M294 180 374 162 407 181 327 200Z" fill="#84336f"/><path d="M327 200 407 181 407 213 327 232Z" fill="#421544"/><path d="M294 180 327 200 327 232 294 212Z" fill="#59204f"/><path d="M305 165 371 150 397 165 331 181Z" fill="#00cde7"/><path d="M305 165v15l26 15v-14" fill="#1287a1"/><text x="343" y="168" fill="#09273a" font-family="monospace" font-size="10" font-weight="bold">02</text></g>
+                  <g><path d="M437 226 517 208 550 227 470 246Z" fill="#84336f"/><path d="M470 246 550 227 550 259 470 278Z" fill="#421544"/><path d="M437 226 470 246 470 278 437 258Z" fill="#59204f"/><path d="M448 211 514 196 540 211 474 227Z" fill="#ffe500"/><path d="M448 211v15l26 15v-14" fill="#c29e18"/><text x="486" y="214" fill="#342242" font-family="monospace" font-size="10" font-weight="bold">03</text></g>
+                  <g><path d="M582 173 662 155 695 174 615 193Z" fill="#84336f"/><path d="M615 193 695 174 695 206 615 225Z" fill="#421544"/><path d="M582 173 615 193 615 225 582 205Z" fill="#59204f"/><path d="M593 158 659 143 685 158 619 174Z" fill="#f178b9"/><path d="M593 158v15l26 15v-14" fill="#bd438b"/><text x="631" y="161" fill="#321039" font-family="monospace" font-size="10" font-weight="bold">04</text></g>
+                  <g><path d="M730 218 810 200 843 219 763 238Z" fill="#84336f"/><path d="M763 238 843 219 843 251 763 270Z" fill="#421544"/><path d="M730 218 763 238 763 270 730 250Z" fill="#59204f"/><path d="M741 203 807 188 833 203 767 219Z" fill="#00d8ed"/><path d="M741 203v15l26 15v-14" fill="#1287a1"/><text x="779" y="206" fill="#09273a" font-family="monospace" font-size="10" font-weight="bold">05</text></g>
+                </g>
+                <!-- Inclusive train carriage display, viewed in perspective -->
+                <g filter="url(#softShadow)">
+                  <path d="M445 282 670 229 800 302 574 357Z" fill="#68194f"/>
+                  <path d="M445 249Q445 238 459 234L650 190Q667 186 681 195L790 255Q800 260 800 272L800 302 574 357 445 285Z" fill="url(#trainBody)" stroke="#ffc0e1" stroke-width="2"/>
+                  <path d="M466 247 641 207 675 226 498 269Z" fill="#06366d" stroke="#00d8ed" stroke-width="2"/>
+                  <path d="M506 271 575 255 575 317 506 334Z" fill="#35123e" stroke="#ffd2e8" stroke-width="2"/>
+                  <path d="M588 252 657 236 657 301 588 318Z" fill="#113e70" stroke="#fbd4e8" stroke-width="2"/>
+                  <path d="M671 233 750 276 750 296 671 256Z" fill="#113e70" stroke="#00d8ed" stroke-width="2"/>
+                  <path d="M470 295 493 289 493 319 470 325Z" fill="#ffe500"/><path d="M765 304 787 299" stroke="#ffe500" stroke-width="5"/>
+                  <circle cx="526" cy="344" r="12" fill="#180923" stroke="#ff9bd0" stroke-width="4"/><circle cx="731" cy="312" r="12" fill="#180923" stroke="#ff9bd0" stroke-width="4"/>
+                  <path d="M441 285 573 357 800 302" fill="none" stroke="#ffbada" stroke-width="3"/>
+                </g>
+                <!-- benches, light strips and entry markers -->
+                <path d="M193 302 255 287 279 301 217 317ZM862 247 918 234 939 246 883 260Z" fill="#00d8ed" opacity=".8"/>
+                <path d="M112 268 390 422M1030 275 390 422" stroke="#f178b9" stroke-width="3" opacity=".65"/>
+                <text x="401" y="407" fill="#ffd7ec" font-family="monospace" font-size="11" letter-spacing="2">WELCOME ABOARD · 모두의 열차</text>
+                <path d="M411 430h142" stroke="#ffe500" stroke-width="3"/><text x="414" y="449" fill="#ffe500" font-family="monospace" font-size="9">ENTRANCE / EXIT</text>
+              </svg>
+              <svg class="plan-art" viewBox="0 0 1100 450" role="img" aria-labelledby="planTitle planDesc" xmlns="http://www.w3.org/2000/svg">
+                <title id="planTitle">포용적 지하철 전시 내부 평면도</title><desc id="planDesc">긴 열차 객실의 중앙 통로를 따라 좌석, 접이식 좌석, 손잡이, 안내 화면, 휠체어 공간을 배치한 위에서 본 도면입니다.</desc>
+                <defs>
+                  <pattern id="planGrid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#f178b9" stroke-opacity=".07" stroke-width="1"/></pattern>
+                  <linearGradient id="seatFace" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#73406e"/><stop offset="1" stop-color="#482044"/></linearGradient>
+                  <filter id="planGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                </defs>
+                <rect width="1100" height="450" rx="14" fill="#251034"/>
+                <rect width="1100" height="450" rx="14" fill="url(#planGrid)"/>
+                <!-- Dimension marks echo the architect's drawing -->
+                <path d="M144 68v-24m830 24v-24M144 50h830m-830 310v25m830-25v25m-830-9h830" stroke="#ffe500" stroke-width="1.5" opacity=".8"/>
+                <path d="M132 87h-26m26 265h-26m12-265v265" stroke="#ffe500" stroke-width="1.5" opacity=".8"/>
+                <text x="545" y="43" fill="#ffe500" text-anchor="middle" font-family="monospace" font-size="13" letter-spacing="2">8345 · TRAIN CAR INTERIOR</text>
+                <text x="97" y="223" fill="#ffe500" text-anchor="middle" font-family="monospace" font-size="12" transform="rotate(-90 97 223)">3040</text>
+                <!-- Carriage boundary and sensorial padding along the left wall -->
+                <rect x="145" y="82" width="836" height="272" rx="3" fill="#30133e" stroke="#f178b9" stroke-width="7"/>
+                <rect x="153" y="90" width="17" height="256" fill="#ffcf5c" opacity=".9"/>
+                <path d="M157 99v239" stroke="#6b451f" stroke-width="2" stroke-dasharray="4 5"/>
+                <text x="164" y="218" fill="#2b1037" font-family="monospace" font-size="8" font-weight="bold" transform="rotate(-90 164 218)" text-anchor="middle">TACTILE / SENSORIAL PADDING</text>
+                <!-- central clear aisle, tactile guidance and repeated grab poles -->
+                <rect x="172" y="194" width="797" height="55" fill="#190d2a" stroke="#95618c" stroke-width="1.5"/>
+                <path d="M172 220h797" stroke="#00d8ed" stroke-width="2.5" stroke-dasharray="4 8" filter="url(#planGlow)"/>
+                <text x="573" y="232" fill="#75edf4" font-family="monospace" font-size="9" letter-spacing="2" text-anchor="middle">CLEAR ACCESS ROUTE · 1200 mm</text>
+                <g fill="#f3afd5" stroke="#260d35" stroke-width="2">
+                  <rect x="208" y="210" width="7" height="20" rx="3"/><rect x="244" y="210" width="7" height="20" rx="3"/><rect x="280" y="210" width="7" height="20" rx="3"/><rect x="316" y="210" width="7" height="20" rx="3"/>
+                  <rect x="410" y="210" width="7" height="20" rx="3"/><rect x="446" y="210" width="7" height="20" rx="3"/><rect x="482" y="210" width="7" height="20" rx="3"/><rect x="518" y="210" width="7" height="20" rx="3"/>
+                  <rect x="640" y="210" width="7" height="20" rx="3"/><rect x="676" y="210" width="7" height="20" rx="3"/><rect x="712" y="210" width="7" height="20" rx="3"/><rect x="748" y="210" width="7" height="20" rx="3"/><rect x="784" y="210" width="7" height="20" rx="3"/><rect x="820" y="210" width="7" height="20" rx="3"/><rect x="856" y="210" width="7" height="20" rx="3"/>
+                </g>
+                <!-- Overhead information screen and portrait screen / charging box -->
+                <rect x="291" y="100" width="132" height="52" rx="3" fill="#0b376b" stroke="#00d8ed" stroke-width="3"/>
+                <text x="357" y="122" fill="#9df7fc" font-family="monospace" font-size="9" text-anchor="middle">NEXT STOP</text><path d="M315 134h84" stroke="#f178b9" stroke-width="3"/>
+                <rect x="196" y="103" width="36" height="89" rx="3" fill="#261135" stroke="#e7a7d0" stroke-width="2"/><rect x="201" y="108" width="26" height="65" fill="#0b376b" stroke="#00d8ed"/><text x="214" y="185" fill="#ffe500" text-anchor="middle" font-family="monospace" font-size="6">55 IN</text>
+                <rect x="250" y="108" width="22" height="83" rx="3" fill="#40203f" stroke="#ecacd0" stroke-width="2"/>
+                <!-- Upper bench bays -->
+                <g fill="url(#seatFace)" stroke="#f5b9db" stroke-width="2">
+                  <rect x="444" y="98" width="90" height="82" rx="4"/><path d="M489 98v82M444 139h90" fill="none" stroke="#d582b6"/>
+                  <rect x="554" y="98" width="81" height="82" rx="4"/><path d="M594 98v82M554 139h81" fill="none" stroke="#d582b6"/>
+                  <rect x="673" y="97" width="68" height="91" rx="4"/><path d="M683 105q20 12 0 24t0 24t0 24M728 105q-20 12 0 24t0 24t0 24" fill="none" stroke="#e7a5ce" stroke-width="2"/>
+                </g>
+                <rect x="770" y="104" width="36" height="88" rx="4" fill="#1c112c" stroke="#f4beda" stroke-width="2"/><path d="M778 111v74" stroke="#00d8ed" stroke-width="2"/>
+                <!-- Fold-down seat and four-handle vertical pole station -->
+                <rect x="826" y="105" width="45" height="87" rx="6" fill="#3e1a43" stroke="#ff93c9" stroke-width="2"/><path d="M835 114h27v52h-27z" fill="#713369" stroke="#f2b8da"/>
+                <path d="M890 100v88m-11-82q11 0 11 9t-11 9m11-18q11 0 11 9t-11 9m-11 8q11 0 11 9t-11 9m11-18q11 0 11 9t-11 9" fill="none" stroke="#00d8ed" stroke-width="3"/>
+                <text x="849" y="185" fill="#ffd3ea" font-family="monospace" font-size="7" text-anchor="middle">FOLD SEAT</text>
+                <!-- Lower accessible bay, wheelchair turning space and bench seats -->
+                <rect x="433" y="264" width="134" height="76" rx="4" fill="#0a3159" fill-opacity=".48" stroke="#00d8ed" stroke-width="2" stroke-dasharray="7 5"/>
+                <circle cx="492" cy="294" r="12" fill="none" stroke="#93f2f7" stroke-width="4"/><path d="M487 305v17h26l12 10m-38-15-12 9m12-9 11 14" fill="none" stroke="#93f2f7" stroke-width="4" stroke-linecap="round"/>
+                <text x="500" y="335" fill="#8df1f5" font-family="monospace" font-size="7" text-anchor="middle">WHEELCHAIR BAY</text>
+                <g fill="url(#seatFace)" stroke="#f5b9db" stroke-width="2">
+                  <rect x="582" y="264" width="84" height="76" rx="4"/><path d="M624 264v76M582 302h84" fill="none" stroke="#d582b6"/>
+                  <rect x="666" y="264" width="84" height="76" rx="4"/><path d="M708 264v76M666 302h84" fill="none" stroke="#d582b6"/>
+                  <rect x="750" y="264" width="68" height="76" rx="4"/><path d="M784 264v76M750 302h68" fill="none" stroke="#d582b6"/>
+                </g>
+                <!-- Fold-down seat, exit zone and door clearance -->
+                <rect x="835" y="267" width="41" height="69" rx="5" fill="#3e1a43" stroke="#ff93c9" stroke-width="2"/><path d="M842 274h27v42h-27z" fill="#713369" stroke="#f2b8da"/>
+                <path d="M890 251v90M902 251v90" stroke="#f178b9" stroke-width="5"/><path d="M891 341q75 0 75-69" fill="none" stroke="#dfb3d0" stroke-width="1.5" stroke-dasharray="5 5"/>
+                <text x="929" y="331" fill="#ffd3ea" font-family="monospace" font-size="8" text-anchor="middle">EXIT</text>
+                <!-- Entry lips and floor transition marks -->
+                <path d="M145 82v32m0 220v22m836-272v38m0 190v38" stroke="#00d8ed" stroke-width="5"/>
+              </svg>
+              <button class="zone zone-vision" data-zone="vision" aria-label="시각장애 캐릭터 만화 열기"><span class="zone-pin">01</span><span class="avatar char-vision">🧑🏻‍🦯</span><span class="zone-label">Visual Impairment</span></button>
+              <button class="zone zone-move" data-zone="move" aria-label="지체장애 캐릭터 만화 열기"><span class="zone-pin">02</span><span class="avatar char-physical">👧🏻‍🦽</span><span class="zone-label">Physical Disability</span></button>
+              <button class="zone zone-autism" data-zone="autism" aria-label="자폐 스펙트럼 캐릭터 만화 열기"><span class="zone-pin">03</span><span class="avatar char-autism">🧒🏻</span><span class="zone-label">Autism Spectrum</span></button>
+              <button class="zone zone-down" data-zone="down" aria-label="지적장애 캐릭터 만화 열기"><span class="zone-pin">04</span><span class="avatar char-down">👧🏻</span><span class="zone-label">Intellectual Disability</span></button>
+              <button class="zone zone-adhd" data-zone="adhd" aria-label="ADHD와 난독증 캐릭터 만화 열기"><span class="zone-pin">05</span><span class="avatar char-adhd">👧🏻</span><span class="zone-label">ADHD · Dyslexia</span></button>
+            </div>
+          </div>
+          <div class="map-legend"><span><i class="legend-dot green-dot"></i> 만화를 볼 수 있는 구역</span><span><i class="legend-line"></i> 모두를 위한 이동 동선</span><span class="legend-note">* 전시장 도면을 웹 경험에 맞게 단순화했어요.</span></div>
+        </div>
+        <aside class="zone-list" aria-label="전시 구역 목록">
+          <div class="zone-list-head"><span>CHARACTERS</span><span>05 STORIES</span></div>
+          <div id="zoneList"></div>
+          <div class="zone-hint"><span>TIP</span> 캐릭터를 누르면 해당 만화가 열려요.</div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <dialog class="reader" id="reader" aria-labelledby="readerTitle">
+    <div class="reader-shell">
+      <header class="reader-header"><div class="reader-progress"><span id="readerModeLabel">만화</span><i></i><span id="readerScrollLabel">스크롤해서 읽기</span></div><nav class="reader-chapter-nav" id="readerNav" aria-label="만화 이동"><button id="readerPrev" aria-label="이전 만화">←</button><span id="readerCount" aria-live="polite">01 / 05</span><button id="readerNext" aria-label="다음 만화">→</button></nav><button class="reader-close" id="readerClose" aria-label="만화 닫기">×</button></header>
+      <div class="reader-content"><div class="reader-heading"><h2 id="readerTitle"></h2></div><div class="manga-pages" id="mangaPages"></div><div class="reader-end"><span id="readerEndLabel">— 이야기 끝 —</span><p id="readerEndCopy">다음 이야기도 이어서 읽어보세요.</p><div class="reader-end-actions"><button id="readerPrevEnd" class="reader-next-story">← 이전 만화</button><button id="readerNextEnd" class="reader-next-story">다음 만화 <span>→</span></button><button id="readerDone">전시장으로 돌아가기 <span>↗</span></button></div></div></div>
+    </div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
